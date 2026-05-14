@@ -19,6 +19,12 @@ function App() {
     updateAnswer[currentQuestion] = selectedIndex;
 
     setAnswers(updateAnswer);
+
+    setTimeout(() => {
+      if (currentQuestion < questions.length - 1) {
+        setCurrentQuestion(currentQuestion + 1);
+      }
+    });
   }
 
   function nextQuestion() {
@@ -66,7 +72,7 @@ function App() {
             onClick={nextQuestion}
             disabled={currentQuestion === questions.length - 1}
           >
-            Nesx
+            Next
           </button>
 
           <button onClick={resetQuiz}>Reset</button>

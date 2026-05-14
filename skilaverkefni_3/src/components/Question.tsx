@@ -37,7 +37,7 @@ function Question({
 
       <h2>{questionData.question}</h2>
 
-      <div>
+      <div className="options">
         {questionData.options.map((option, index) => (
           <button
             key={option}
